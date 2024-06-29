@@ -16,11 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from app.views import TravelDetailView, KlassView, HotelView
+from app.views import TravelRetrieveUpdateDestroyAPIView, KlassRetrieveUpdateDestroyAPIView, HotelSerializer
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/v1/travel/<int:pk>/', TravelDetailView.as_view(), name='travel'),
-    path('api/v2/klass/<int:pk>/', KlassView.as_view(), name='transport'),
-    path('api/v3/hotel/<int:pk>/', HotelView.as_view(), name='mexmonxona'),
+    path('api/v1/travel/<int:pk>/', TravelRetrieveUpdateDestroyAPIView.as_view(), name='travel'),
+    
 ]
