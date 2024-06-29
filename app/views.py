@@ -10,6 +10,9 @@ from .models import Travel, Klass, Hotel
 from .serializers import TravelSerializer, HotelSerializer, KlassSerializer
 
 
+# Barcha ish bajarildi bu bitta voris olinayotgan class ham get, ham put, ham putch, ham delete qila oladi hamma shartlar bitta funksiyada qondirildi.
+
+
 class TravelRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
     queryset = Travel.objects.all()
     serializer_class = TravelSerializer

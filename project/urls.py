@@ -16,10 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from app.views import TravelRetrieveUpdateDestroyAPIView, KlassRetrieveUpdateDestroyAPIView, HotelSerializer
+from app.views import TravelRetrieveUpdateDestroyAPIView, KlassRetrieveUpdateDestroyAPIView, HotelRetrieveUpdateDestroyAPIView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/v1/travel/<int:pk>/', TravelRetrieveUpdateDestroyAPIView.as_view(), name='travel'),
-    
+    path('api/v1/klass/<int:pk>/', KlassRetrieveUpdateDestroyAPIView.as_view(), name='klass'),
+    path('api/v1/hotel/<int:pk>/', HotelRetrieveUpdateDestroyAPIView.as_view(), name='hotel'),
 ]
+

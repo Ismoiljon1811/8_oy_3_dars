@@ -4,25 +4,24 @@ from .models import Travel, Hotel, Klass
 from rest_framework import serializers
 
 
-class TravelSerializer(serializers.ModelField):
+from rest_framework import serializers
+from .models import Travel, Hotel, Klass
 
+class TravelSerializer(serializers.ModelSerializer):
     class Meta:
         model = Travel
         fields = '__all__'
 
-
-class KlassSerializer(serializers.ModelField):
-
+class KlassSerializer(serializers.ModelSerializer):
     class Meta:
         model = Klass
         fields = '__all__'
 
-
-class HotelSerializer(serializers.ModelField):
-
+class HotelSerializer(serializers.ModelSerializer):
     class Meta:
         model = Hotel
         fields = '__all__'
+
 
 
 
